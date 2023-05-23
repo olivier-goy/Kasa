@@ -8,7 +8,6 @@ import Housing from './Pages/Housing/Housing';
 import About from './Pages/About/About';
 import Error from './Pages/404/404';
 import Header from './Components/Header/Header';
-import Tag from './Components/Tag/Tag';
 
 const routes = createBrowserRouter([
   {
@@ -36,10 +35,7 @@ root.render(
     <Header />
     <main>
       <RouterProvider router={routes} />
-    </main>
-    <button>coucou</button>
-    <Tag></Tag>
-       
+    </main>       
   </React.StrictMode>
 );
 
