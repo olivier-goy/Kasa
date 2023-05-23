@@ -8,6 +8,7 @@ import Housing from './Pages/Housing/Housing';
 import About from './Pages/About/About';
 import Error from './Pages/404/404';
 import Header from './Components/Header/Header';
+import Tag from './Components/Tag/Tag';
 
 const routes = createBrowserRouter([
   {
@@ -32,8 +33,13 @@ const routes = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header/>
-    <RouterProvider router={routes} />
+    <Header />
+    <main>
+      <RouterProvider router={routes} />
+    </main>
+    <button>coucou</button>
+    <Tag></Tag>
+       
   </React.StrictMode>
 );
 
