@@ -1,41 +1,46 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import '../src/Styles/index.css';
-import App from './Pages/App/App';
-import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Housing from './Pages/Housing/Housing';
-import About from './Pages/About/About';
-import Error from './Pages/404/404';
-import Header from './Components/Header/Header';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "../src/Styles/index.css";
+import App from "./Pages/App/App";
+import reportWebVitals from "./reportWebVitals";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  BrowserRouter,
+} from "react-router-dom";
+import Housing from "./Pages/Housing/Housing";
+import About from "./Pages/About/About";
+import Error from "./Pages/404/404";
+import Header from "./Components/Header/Header";
 
 const routes = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
   },
   {
-    path: '/logements/:id',
-    element: <Housing/>
+    path: "/logements/:id",
+    element: <Housing />,
   },
   {
-    path: '/a-propos',
-    element: <About/>
-    
+    path: "/a-propos",
+    element: <About />,
   },
   {
-    path: '/*',
-    element: <Error/>
-  }
+    path: "/*",
+    element: <Error />,
+  },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Header />
+    <BrowserRouter>
+      <Header />
+    </BrowserRouter>
     <main>
       <RouterProvider router={routes} />
-    </main>       
+    </main>
   </React.StrictMode>
 );
 
