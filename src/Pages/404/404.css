@@ -1,22 +1,23 @@
-.style404 {
+.styleText404 {
   color: #ff6060;
   text-align: center;
+}
+
+.style404 {
   font-size: 288px;
   font-weight: 700;
   line-height: 142.6%;
+  margin-bottom: 0;
 }
 .styleTextError {
-  color: #ff6060;
-  text-align: center;
   font-size: 36px;
   font-weight: 500;
   line-height: 142.6%;
+  margin: 0 0 182px 0;
 }
-
 .styleTextReturn {
   color: #ff6060;
-  text-align: center;
-  font-weight: 500;
   font-size: 18px;
+  font-weight: 500;
   line-height: 142.6%;
 }

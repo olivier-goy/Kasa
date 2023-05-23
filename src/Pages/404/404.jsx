@@ -2,7 +2,7 @@ import "../404/404.css";
 
 function Error() {
   return (
-    <div>
+    <div className="styleText404">
       <h1 className="style404">404</h1>
       <p className="styleTextError">
         Oups! La page que vous demandez n'existe pas.
