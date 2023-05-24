@@ -1,6 +1,18 @@
+.styleHeaderCommon {
+    display: flex;
+}
+.styleHeaderCommon img {
+    display: flex;
+    flex: 1;
+    max-width: 12.5%;
+    justify-content: flex-start;
+    align-items: center;
+}
 .styleHeaderCommon nav {
   display: flex;
+  flex: 1;
   justify-content: flex-end;
+  align-items: center;
   gap: 57px;
 }
 .styleHeaderNavBar {
