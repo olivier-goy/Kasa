@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "../Header/Header.css";
-import logo from "/Users/olivier/Cours OpenClassroom/PROJET 6 REACT/Project/kasa/src/Assets/LOGO.png";
+import logo from "../../Assets/LOGO.png";
 
 function Header() {
   return (
