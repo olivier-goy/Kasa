@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+.styleAppImage {
+  position: relative;
+  margin-top: 70px;
+  color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.styleAppImage h1 {
+  margin: 0;
+  position: absolute;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 142.6%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.styleAppImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  filter: brightness(80%);
+  -webkit-filter: brightness(80%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.styleHousingInnerHomePage {
+  margin-top: 45px;
+  background-color: #f7f7f7;
+  border-radius: 25px;
+  padding: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cardsHousings {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+.cardHousing {
+  flex: 30%;
+  border-radius: 10px;
+  width: 100%;
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+.cardHousing img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.cardHousing p {
+  position: absolute;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #ffffff;
 }
