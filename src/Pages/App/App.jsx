@@ -1,4 +1,4 @@
-import { housingLists } from "../../datas/housingList";
+import { housingLists } from "../../datas/housingList.js";
 import imageHome from "../../Assets/imageHome.jpg";
 import "../App/App.css";
 
