@@ -48,7 +48,12 @@
   height: auto;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
+/* .cardHousing:hover {
+  width: 102%;
+  height: 102%;
+} */
 .cardHousing::before {
   bottom: 0;
   background: linear-gradient(
@@ -61,6 +66,10 @@
   position: absolute;
   right: 0;
   top: 0;
+}
+.cardHousing a {
+  width: 100%;
+  height: 100%;
 }
 .cardHousing img {
   object-fit: cover;

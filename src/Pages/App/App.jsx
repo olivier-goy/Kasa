@@ -5,12 +5,12 @@ import "../App/App.css";
 function App() {
 
     const cardHousing = housingLists.map((housingList) =>
-        <div key={housingList.id} className="cardHousing">
-            <img src={housingList.cover} alt={housingList.title} />
-            <div className="cardBoxShadow">
-                <p>{housingList.title}</p>
-            </div>
-        </div>
+        <a href={"/logements/" + housingList.id} key={housingList.id} className="cardHousing">
+                <img src={housingList.cover} alt={housingList.title} />
+                <div className="cardBoxShadow">
+                    <p>{housingList.title}</p>
+                </div>
+        </a>
     )
 
     return (
