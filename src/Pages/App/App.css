@@ -3,6 +3,19 @@
   margin-top: 70px;
   color: #ffffff;
 }
+.styleAppImage::before {
+  bottom: 0;
+  background: #000000;
+  mix-blend-mode: darken;
+  opacity: 0.3;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 25px;
+  height: 99%;
+}
 .styleAppImage h1 {
   margin: 0;
   position: absolute;
@@ -17,8 +30,6 @@
   width: 100%;
   height: auto;
   border-radius: 25px;
-  filter: brightness(80%);
-  -webkit-filter: brightness(80%);
 }
 .styleHousingInnerHomePage {
   margin-top: 45px;
@@ -38,12 +49,25 @@
   overflow: hidden;
   position: relative;
 }
+.cardHousing::before {
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .cardHousing img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.cardHousing p {
+.cardBoxShadow p {
   font-weight: 500;
   font-size: 18px;
   line-height: 142.6%;
@@ -51,5 +75,6 @@
   color: #ffffff;
   bottom: 2%;
   left: 5%;
-  width: 30%;
+  width: 35%;
+  border-radius: 20px;
 }
