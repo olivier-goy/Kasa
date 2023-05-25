@@ -3,10 +3,6 @@ import imageHome from "../../Assets/imageHome.jpg";
 import "../App/App.css";
 
 function App() {
-    
-    const housingListCover = housingLists.map((housingList) => housingList.cover)
-    
-    console.log(housingListCover)
 
     const cardHousing = housingLists.map((housingList) =>
         <div key={housingList.id} className="cardHousing"><img src={ housingList.cover } alt={housingList.title} /><p>{ housingList.title }</p></div>
@@ -16,7 +12,7 @@ function App() {
         <div className="styleAppCommun">
             <div className="styleAppImage">
                 <img
-                    src={imageHome}
+                    src={ imageHome }
                     alt="Paysage d'une côte de bord de mer avec des rochers"
                 />
                 <h1 className="textInnerImage">Chez vous, partout et ailleurs</h1>

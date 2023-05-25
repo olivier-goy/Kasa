@@ -3,7 +3,6 @@
   margin-top: 70px;
   color: #ffffff;
 }
-
 .styleAppImage h1 {
   margin: 0;
   position: absolute;
@@ -21,7 +20,6 @@
   filter: brightness(80%);
   -webkit-filter: brightness(80%);
 }
-
 .styleHousingInnerHomePage {
   margin-top: 45px;
   background-color: #f7f7f7;
@@ -38,15 +36,20 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+  position: relative;
 }
 .cardHousing img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  position: relative;
 }
-
 .cardHousing p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
   position: absolute;
-  color: red;
+  color: #ffffff;
+  bottom: 2%;
+  left: 5%;
+  width: 30%;
 }
