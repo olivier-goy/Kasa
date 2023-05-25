@@ -29,27 +29,24 @@
   padding: 50px;
 }
 .cardsHousings {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
 }
 .cardHousing {
-  flex: 30%;
   border-radius: 10px;
   width: 100%;
-  height: 340px;
-  position: relative;
+  height: auto;
   overflow: hidden;
 }
 .cardHousing img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .cardHousing p {
   position: absolute;
-
-  color: #ffffff;
+  color: red;
 }
