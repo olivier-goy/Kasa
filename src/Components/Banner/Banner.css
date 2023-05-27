@@ -1,0 +1,33 @@
+.styleAppImage {
+    position: relative;
+    margin-top: 70px;
+    color: #ffffff;
+  }
+  .styleAppImage::before {
+    bottom: 0;
+    background: #000000;
+    mix-blend-mode: darken;
+    opacity: 0.3;
+    content: " ";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 25px;
+    height: 99%;
+  }
+  .styleAppImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+  }
+  .styleAppImage h1 {
+    margin: 0;
+    position: absolute;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 142.6%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
