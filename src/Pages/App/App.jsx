@@ -1,30 +1,16 @@
-import { housingLists } from "../../datas/housingList";
-import "../App/App.css";
-import Banner from "../../Components/Banner/Banner";
+import Banner from "../../Components/Banner/Banner"
+import Card from "../../Components/Card/Card"
+import "../App/App.css"
 
 function App() {
 
-    const cardHousing = housingLists.map((housingList) =>
-        <a href={"/logements/" + housingList.id} key={housingList.id} className="cardHousing">
-            <img src={housingList.cover} alt={housingList.title} />
-            <div className="cardBoxShadow">
-                <p>{housingList.title}</p>
-            </div>
-        </a>
-    )
-
     return (
-        <div className="styleAppCommun">
+        <div>
+            <Banner />
 
-            <Banner/>
-
-            <div className="styleHousingInnerHomePage">
-                <div className="cardsHousings">
-                    {cardHousing}
-                </div>
-            </div>
+            <Card />
         </div>
-    );
+    )
 }
 
-export default App;
+export default App
