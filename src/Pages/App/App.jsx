@@ -8,7 +8,9 @@ function App() {
         <div>
             <Banner />
 
-            <Card />
+            <div className="styleHousingInnerHomePage">
+                <Card />
+            </div>
         </div>
     )
 }

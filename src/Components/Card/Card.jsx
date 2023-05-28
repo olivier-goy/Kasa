@@ -13,11 +13,9 @@ function Card() {
 )
 
     return (
-        <div className="styleHousingInnerHomePage">
             <div className="cardsHousings">
                 {cardHousing}
             </div>
-        </div>
     )
 }
 
