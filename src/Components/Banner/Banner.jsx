@@ -1,15 +1,15 @@
-import imageBanner from "../../Assets/imageHome.jpg";
+
 import "../Banner/Banner.css"
 
 
-function Banner() {
+function Banner({title, image, alt}) {
     return (
         <div className="styleAppImage">
             <img
-                src={imageBanner}
-                alt="Paysage d'une côte de bord de mer avec des rochers"
+                src={image}
+                alt={alt}
             />
-            <h1 className="textInnerImage">Chez vous, partout et ailleurs</h1>
+            <h1 className="textInnerImage">{title}</h1>
         </div>
     )
 }
