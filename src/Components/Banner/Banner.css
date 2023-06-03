@@ -2,6 +2,11 @@
     position: relative;
     margin-top: 70px;
     color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+    height: 226px;
+
   }
   .styleAppImage::before {
     bottom: 0;
@@ -14,12 +19,11 @@
     right: 0;
     top: 0;
     border-radius: 25px;
-    height: 99%;
   }
   .styleAppImage img {
     width: 100%;
-    height: auto;
-    border-radius: 25px;
+    height: 100%;
+    object-fit: cover;
   }
   .styleAppImage h1 {
     margin: 0;

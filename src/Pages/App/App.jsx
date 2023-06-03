@@ -30,7 +30,7 @@ function App() {
                 {housingsData.map(housing => (
                     <Card
                         key={housing.id}
-                        linkCard={housing.id}
+                        linkCard={'/logements/'+ housing.id}
                         pictureCard={housing.cover}
                         altCard={housing.title}
                         titleCard={housing.title}
