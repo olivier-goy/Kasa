@@ -1,21 +1,15 @@
-import { housingLists } from "../../datas/housingList"
+import { Link } from 'react-router-dom'
 import "../Card/Card.css"
 
-function Card() {
-
-    const cardHousing = housingLists.map((housingList) =>
-    <a href={"/logements/" + housingList.id} key={housingList.id} className="cardHousing">
-        <img src={housingList.cover} alt={housingList.title} />
-        <div className="cardBoxShadow">
-            <p>{housingList.title}</p>
-        </div>
-    </a>
-)
+function Card({ linkCard,  pictureCard, altCard, titleCard }) {
 
     return (
-            <div className="cardsHousings">
-                {cardHousing}
-            </div>
+        <Link href={"/logements/" + linkCard} className="cardHousing" >
+                <img src={pictureCard} alt={altCard} />
+                <div className="cardBoxShadow">
+                    <p>{titleCard}</p>
+                </div>
+        </Link>
     )
 }
 

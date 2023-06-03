@@ -1,20 +1,41 @@
 import Banner from "../../Components/Banner/Banner"
-import Card from "../../Components/Card/Card"
 import "../App/App.css"
 import imageBanner from "../../Assets/imageHome.jpg";
-import Tag from "../../Components/Tag/Tag";
+import Card from "../../Components/Card/Card"
+import { useEffect, useState } from "react";
+
 
 function App() {
-    const index = [1, 2, 3, 4, 5, 6,]
+
+    const [housingsData, setHousingsData] = useState([])
+
+    useEffect(() => {
+        async function fetchCard() {
+            try {
+                const response = await fetch('Data/logements.json')
+                const housingsData = await response.json()
+                setHousingsData(housingsData)
+            } catch (err) {
+                console.error(err)
+            }
+        }
+        fetchCard()
+    }, [])
+
 
     return (
         <div>
-            <Banner title="adfaf" image={ imageBanner } alt="qdfsqsfdv"/>
-
-            <div className="styleHousingInnerHomePage">
-                {
-                    index.map(i => <Tag label={i}></Tag>)
-                }
+            <Banner title="Chez vous, partout et ailleurs" image={imageBanner} alt="Image d'une cote au bord de mer" />
+            <div className="cardsHousings">
+                {housingsData.map(housing => (
+                    <Card
+                        key={housing.id}
+                        linkCard={housing.id}
+                        pictureCard={housing.cover}
+                        altCard={housing.title}
+                        titleCard={housing.title}
+                    />
+                ))}
             </div>
         </div>
     )

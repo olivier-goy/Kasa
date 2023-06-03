@@ -1,6 +1,9 @@
-.styleHousingInnerHomePage {
+.cardsHousings {
   margin-top: 45px;
   background-color: #f7f7f7;
   border-radius: 25px;
   padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
 }
