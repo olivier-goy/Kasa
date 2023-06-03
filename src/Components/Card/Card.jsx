@@ -4,7 +4,7 @@ import "../Card/Card.css"
 function Card({ linkCard,  pictureCard, altCard, titleCard }) {
 
     return (
-        <Link href={linkCard} className="cardHousing" reloadDocument>
+        <Link to={linkCard} className="cardHousing">
                 <img src={pictureCard} alt={altCard} />
                 <div className="cardBoxShadow">
                     <p>{titleCard}</p>
