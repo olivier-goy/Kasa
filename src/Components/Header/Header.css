@@ -1,12 +1,12 @@
 .styleHeaderCommon {
-    display: flex;
+  display: flex;
 }
 .styleHeaderCommon img {
-    display: flex;
-    flex: 1;
-    max-width: 12.5%;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex: 1;
+  max-width: 12.5%;
+  justify-content: flex-start;
+  align-items: center;
 }
 .styleHeaderCommon nav {
   display: flex;
@@ -22,9 +22,29 @@
   font-size: 24px;
   line-height: 142.6%;
 }
-.navActiveHome, .navActiveAbout {
+.navActiveHome,
+.navActiveAbout {
   color: #ff6060;
   font-weight: 500;
   font-size: 24px;
   line-height: 142.6%;
+}
+
+@media (max-width: 400px) {
+  
+  .styleHeaderCommon img{
+    max-width: 35%;
+  }
+  .styleHeaderCommon nav {
+    gap: 10px;
+  }
+  .navActiveHome,
+  .navActiveAbout {
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .styleHeaderNavBar {
+    font-weight: 500;
+    font-size: 12px;
+  }
 }

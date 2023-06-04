@@ -35,3 +35,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+@media (max-width: 400px) {
+  .styleAppImage {
+    margin-top: 20px;
+  }
+  .styleAppImage {
+    border-radius: 10px;
+  }
+}

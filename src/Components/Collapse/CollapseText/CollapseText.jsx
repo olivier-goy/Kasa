@@ -1,5 +1,3 @@
-
-
 function CollapseText({ children }) {
     return (
         <div>

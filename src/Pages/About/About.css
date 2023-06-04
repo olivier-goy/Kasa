@@ -1,0 +1,9 @@
+.collapseAbout {
+    padding: 0 10%;
+}
+
+@media (max-width: 400px) {
+    .collapseAbout {
+        padding: 0;
+    }
+}

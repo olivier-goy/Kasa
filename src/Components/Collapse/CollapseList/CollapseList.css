@@ -1,0 +1,7 @@
+.listStyle {
+    padding: 0;
+}
+
+.listStyle li {
+    list-style-type: none;
+}

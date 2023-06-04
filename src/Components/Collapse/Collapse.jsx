@@ -14,8 +14,8 @@ function Collapse({ title, children }) {
             {isOpenCollapse ? (
                 <div className="collapsible">
                     <div className="innerCollapse">
-                        <div>{title}</div>
-                        <div>
+                        <div className="collapseTitle">{title}</div>
+                        <div className="collapsePicture">
                             <img src={vectorOpen} onClick={() => setIsOpenCollapse(false)} alt="logo vector fermé" />
                         </div>
                     </div>
@@ -24,8 +24,8 @@ function Collapse({ title, children }) {
                 <div>
                     <div className="collapsible">
                         <div className="innerCollapse">
-                            <div>{title}</div>
-                            <div >
+                            <div className="collapseTitle">{title}</div>
+                            <div className="collapsePicture">
                                 <img src={vectorClose} onClick={() => setIsOpenCollapse(true)} alt="logo vector ouvert" />
                             </div>
                         </div>

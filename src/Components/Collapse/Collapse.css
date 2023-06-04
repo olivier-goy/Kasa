@@ -3,25 +3,55 @@
   color: white;
   border-radius: 5px;
   height: 47px;
-  cursor: pointer;
   width: 100%;
   font-weight: 500;
   font-size: 24px;
   line-height: 142.6%;
   display: flex;
+  margin-top: 31px;
 }
 
 .innerCollapse {
-  padding: 1%;
+  padding: 2%;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
+.collapseTitle {
+  flex: 1;
+}
+
+.collapsePicture {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
 .content {
-  padding: 0 18px;
+  padding: 2%;
   overflow: hidden;
   color: #ff6060;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   border-radius: 0 0 5px 5px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 142.6%;
+}
 
+@media (max-width: 400px) {
+  .collapsible {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 142.6%;
+  }
+  .collapsePicture {
+    width: 25%;
+    height: 25%;
+  }
+  .content {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 142.6%;
+  }
 }
