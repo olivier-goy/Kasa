@@ -1,14 +1,13 @@
 import "../CollapseList/CollapseList.css"
 
-function CollapseList({ children }) {
+function CollapseList({ list }) {
 
-    console.log(children)
 
     return (
         <div>
             <ul className="listStyle">
-                {children.map((child, index) => (
-                    <li key={ index }>{ child }</li>                   
+                {list.map((list, index) => (
+                    <li key={ index + list}>{ list }</li>                   
                 ))
 
                 }

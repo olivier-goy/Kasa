@@ -1,7 +1,7 @@
-function CollapseText({ children }) {
+function CollapseText({ description }) {
     return (
         <div>
-            <p>{children}</p>
+            <p>{description}</p>
         </div>
     )
 }

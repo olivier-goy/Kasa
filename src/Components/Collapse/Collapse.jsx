@@ -2,44 +2,30 @@ import { useState } from "react"
 import "../Collapse/Collapse.css"
 import vectorClose from "../../Assets/Vector_1.png"
 import vectorOpen from "../../Assets/Vector_2.png"
-import CollapseText from "./CollapseText/CollapseText"
-import CollapseList from "./CollapseList/CollapseList"
+
 
 function Collapse({ title, children }) {
 
-    const [isOpenCollapse, setIsOpenCollapse] = useState(true)
+    const [isOpenCollapse, setIsOpenCollapse] = useState(false)
 
     return (
         <div>
-            {isOpenCollapse ? (
+            <div>
                 <div className="collapsible">
                     <div className="innerCollapse">
                         <div className="collapseTitle">{title}</div>
                         <div className="collapsePicture">
-                            <img src={vectorOpen} onClick={() => setIsOpenCollapse(false)} alt="logo vector fermé" />
+                            <img src={isOpenCollapse ? vectorOpen : vectorClose} onClick={() => setIsOpenCollapse(!isOpenCollapse)} alt="logo vector ouvert" />
                         </div>
                     </div>
                 </div>
-            ) : (
-                <div>
-                    <div className="collapsible">
-                        <div className="innerCollapse">
-                            <div className="collapseTitle">{title}</div>
-                            <div className="collapsePicture">
-                                <img src={vectorClose} onClick={() => setIsOpenCollapse(true)} alt="logo vector ouvert" />
-                            </div>
-                        </div>
+                {
+                    isOpenCollapse &&
+                    <div className="content">
+                        {children}
                     </div>
-                        <div className="content">
-                           { children.props.description ? (
-                            <CollapseText>{children.props.description}</CollapseText>
-                           ) : (
-                            <CollapseList>{ children.props.list }</CollapseList>
-                            )}
-                    </div>
-                </div>
-
-            )}
+                }
+            </div>
         </div>
     )
 }
