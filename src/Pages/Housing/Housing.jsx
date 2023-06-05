@@ -1,3 +1,5 @@
+import Carousel from "../../Components/Carousel/Carousel"
+
 // import { housingLists } from "../../datas/housingList.js";
 function Housing() {
 
@@ -6,7 +8,10 @@ function Housing() {
 
     return (
 
-        <h1>Housing</h1>
+        <div>
+            <Carousel/>
+            <h1>Housing</h1>
+        </div>
         // <div>
         //     <div>
         //         {housingLists.map((housingList, index) => {
