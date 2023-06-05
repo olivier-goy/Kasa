@@ -7,3 +7,22 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
 }
+
+@media (max-width: 900px) {
+  .cardsHousings {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cardsHousings {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 0;
+    padding: 0;
+  }
+}
