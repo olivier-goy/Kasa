@@ -40,9 +40,7 @@ function Collapse({ title, children }) {
                 </div>
 
             )}
-
         </div>
-
     )
 }
 
