@@ -1,4 +1,5 @@
 import Carousel from "../../Components/Carousel/Carousel"
+import Rating from "../../Components/Rating/Rating"
 
 // import { housingLists } from "../../datas/housingList.js";
 function Housing() {
@@ -15,6 +16,7 @@ function Housing() {
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg"]}/>
             <h1>Housing</h1>
+            <Rating/>
         </div>
         // <div>
         //     <div>
