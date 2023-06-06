@@ -39,7 +39,7 @@
   line-height: 142.6%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .collapsible {
     font-weight: 500;
     font-size: 13px;
