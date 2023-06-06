@@ -29,9 +29,23 @@
   font-size: 24px;
   line-height: 142.6%;
 }
+@media (max-width: 900px) {
+  .styleHeaderCommon img{
+    max-width: 30%;
+  }
+  .styleHeaderCommon nav {
+    gap: 20px;
+  }
+  .navActiveHome,
+  .navActiveAbout {
+    font-size: 20px;
+  }
+  .styleHeaderNavBar {
+    font-size: 20px;
+  }
+}
 
-@media (max-width: 400px) {
-  
+@media (max-width: 500px) {
   .styleHeaderCommon img{
     max-width: 35%;
   }
@@ -40,11 +54,9 @@
   }
   .navActiveHome,
   .navActiveAbout {
-    font-weight: 500;
     font-size: 12px;
   }
   .styleHeaderNavBar {
-    font-weight: 500;
     font-size: 12px;
   }
 }

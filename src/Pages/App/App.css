@@ -5,19 +5,25 @@
   padding: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  gap: 50px;
+}
+@media (max-width: 1300px) {
+  .cardsHousings {
+    padding: 35px;
+    gap: 35px;
+  }
 }
 
 @media (max-width: 900px) {
   .cardsHousings {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 30px;
+    gap: 18px;
+    padding: 18px;
     border-radius: 15px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .cardsHousings {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
