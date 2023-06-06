@@ -20,3 +20,26 @@
   font-weight: 500;
   line-height: 142.6%;
 }
+@media (max-width:900px) {
+  .styleText404 {
+    margin-top: 100px;
+  }
+  .style404 {
+    font-size: 200px;
+  }
+  .styleTextError {
+    font-size: 24px;
+  }
+}
+
+@media (max-width:500px) {
+  .styleText404 {
+    margin-top: 200px;
+  }
+  .style404 {
+    font-size: 96px;
+  }
+  .styleTextError {
+    font-size: 18px;
+  }
+}
