@@ -1,4 +1,9 @@
-.ratingHost {
+.hostHousing {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ratingHousing {
     display: flex;
     justify-content: flex-end;
 }

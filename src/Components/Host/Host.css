@@ -1,0 +1,25 @@
+.hostStyle {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.hostStyle p {
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+  color: #ff6060;
+  font-size: 18px;
+  line-height: 142.6%;
+  width: 5%;
+}
+
+.hostStyle img {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+}
