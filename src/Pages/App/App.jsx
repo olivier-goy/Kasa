@@ -12,7 +12,7 @@ function App() {
     useEffect(() => {
         async function fetchCard() {
             try {
-                const response = await fetch('Data/logements.json')
+                const response = await fetch('http://localhost:3000/Data/logements.json')
                 const housingsData = await response.json()
                 setHousingsData(housingsData)
             } catch (err) {
@@ -21,7 +21,6 @@ function App() {
         }
         fetchCard()
     }, [])
-
 
     return (
         <div>

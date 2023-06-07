@@ -6,6 +6,8 @@ import Host from "../../Components/Host/Host"
 import Rating from "../../Components/Rating/Rating"
 import Tag from "../../Components/Tag/Tag"
 import "../Housing/Housing.css"
+import { useParams } from "react-router-dom"
+import React, { useEffect, useState } from "react"
 
 function Housing() {
 
@@ -22,33 +24,59 @@ function Housing() {
         "Cuisine équipée",
         "Télévision"
     ]
-    const description = "Profitez du charme de la vie parisienne dans un magnifique appartement. A 3 minutes à pied du Canl Saint Martin, vous serez proche des transports, mais également de nombreux commerces. L'appartement est tout équipé, et possède également un parking pour ceux qui souhaitent se déplacer en voiture."
+    // const pictures = [
+    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
+    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-2.jpg",
+    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-3.jpg",
+    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-4.jpg",
+    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-5.jpg",
+    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-6.jpg"
+    // ]
 
 
-    // const { id } = useParams()
+    const { id } = useParams()
+    const [housingData, setHousingData] = useState([])
+
+
+
+    useEffect(() => {
+        async function fetchHousing() {
+            try {
+                const response = await fetch('http://localhost:3000/Data/logements.json')
+                const result = await response.json()
+                // const housingData = await result.filter((data) => data.id === id)
+
+                setHousingData(result[0])
+
+            } catch (err) {
+                console.error(err)
+            }
+        }
+        fetchHousing()
+    }, [id])
+
+    const pictures = housingData.pictures
+
 
     return (
-
         <div>
-            <Carousel pictures={["https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-                "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
-                "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
-                "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-                "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg"]} />
+            {console.log(housingData.pictures)}
+
+            <Carousel pictures={pictures} />
+
             <div className="titleHostRating">
                 <div className="titreAndLocalisation">
                     <h1>Cozy loft on the Canal Saint-Martin</h1>
                     <p>Paris, Île-de-France</p>
-                    {tags.map((tag, index) => 
-                    
-                    <Tag key={index + tag} label={tag} />
+                    {tags.map((tag, index) =>
+                        <Tag key={index + tag} label={tag} />
                     )}
                 </div>
                 <div className="hostRating">
                     <div className="hostHousing">
                         <Host
                             host={{ "name": "Sqsd cqeffeadf" }}
-                            picture={{ "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg" }} />
+                            picture={{ "name": "Sqsd cqeffeadf", "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg" }} />
                     </div>
                     <div className="ratingHousing">
                         <Rating rating="4" />
@@ -59,7 +87,7 @@ function Housing() {
                 <div className="collapseHousingText">
                     <Collapse title="Description">
                         <CollapseText
-                            description={description}
+                            description={housingData.description}
                         />
                     </Collapse>
                 </div>
@@ -71,9 +99,7 @@ function Housing() {
                     </Collapse>
                 </div>
             </div>
-
         </div>
-
     )
 }
 
