@@ -29,8 +29,9 @@
   font-size: 24px;
   line-height: 142.6%;
 }
+
 @media (max-width: 900px) {
-  .styleHeaderCommon img{
+  .styleHeaderCommon img {
     max-width: 30%;
   }
   .styleHeaderCommon nav {
@@ -46,7 +47,7 @@
 }
 
 @media (max-width: 500px) {
-  .styleHeaderCommon img{
+  .styleHeaderCommon img {
     max-width: 35%;
   }
   .styleHeaderCommon nav {

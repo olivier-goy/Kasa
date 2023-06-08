@@ -4,7 +4,6 @@ import imageBanner from "../../Assets/imageHome.jpg";
 import Card from "../../Components/Card/Card"
 import { useEffect, useState } from "react";
 
-
 function App() {
 
     const [housingsData, setHousingsData] = useState([])

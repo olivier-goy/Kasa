@@ -2,3 +2,18 @@
     display: flex;
     gap: 15px;
 }
+
+@media (max-width: 850px) {
+    .ratingStyle {
+        gap: 7px;
+    }
+    .ratingStyle img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .ratingStyle img {
+        width: 13px;
+    }
+}

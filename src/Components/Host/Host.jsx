@@ -1,6 +1,7 @@
 import "../Host/Host.css"
 
 function Host({ host, picture }) {
+    
     return (
         <div className="hostStyle">
                 <p>{host.name}</p>

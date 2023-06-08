@@ -3,7 +3,6 @@ import "../Collapse/Collapse.css"
 import vectorClose from "../../Assets/Vector_1.png"
 import vectorOpen from "../../Assets/Vector_2.png"
 
-
 function Collapse({ title, children }) {
 
     const [isOpenCollapse, setIsOpenCollapse] = useState(false)

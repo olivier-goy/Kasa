@@ -20,7 +20,8 @@
   font-weight: 500;
   line-height: 142.6%;
 }
-@media (max-width:900px) {
+
+@media (max-width: 900px) {
   .styleText404 {
     margin-top: 100px;
   }
@@ -32,7 +33,7 @@
   }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .styleText404 {
     margin-top: 200px;
   }

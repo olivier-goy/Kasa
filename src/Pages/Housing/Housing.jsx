@@ -11,43 +11,18 @@ import React, { useEffect, useState } from "react"
 
 function Housing() {
 
-    const tags = [
-        "Transports",
-        "Cheap",
-        "18ème"
-    ]
-    const equipements = [
-        "Parking",
-        "Sèche Cheveux",
-        "Machine à laver",
-        "Wi-fi",
-        "Cuisine équipée",
-        "Télévision"
-    ]
-    // const pictures = [
-    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
-    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-2.jpg",
-    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-3.jpg",
-    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-4.jpg",
-    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-5.jpg",
-    //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-6.jpg"
-    // ]
-
-
     const { id } = useParams()
+    const [isDataLoading, setDataLoading] = useState(false)
     const [housingData, setHousingData] = useState([])
-
-
 
     useEffect(() => {
         async function fetchHousing() {
             try {
                 const response = await fetch('http://localhost:3000/Data/logements.json')
                 const result = await response.json()
-                // const housingData = await result.filter((data) => data.id === id)
-
-                setHousingData(result[0])
-
+                const housingData = await result.filter((data) => data.id === id)
+                setHousingData(housingData[0])
+                setDataLoading(true)
             } catch (err) {
                 console.error(err)
             }
@@ -55,28 +30,22 @@ function Housing() {
         fetchHousing()
     }, [id])
 
-    const pictures = housingData.pictures
-
-
-    return (
+    return isDataLoading ? (
         <div>
-            {console.log(housingData.pictures)}
-
-            <Carousel pictures={pictures} />
-
+            <Carousel pictures={housingData.pictures} />
             <div className="titleHostRating">
                 <div className="titreAndLocalisation">
-                    <h1>Cozy loft on the Canal Saint-Martin</h1>
-                    <p>Paris, Île-de-France</p>
-                    {tags.map((tag, index) =>
+                    <h1>{housingData.title}</h1>
+                    <p>{housingData.location}</p>
+                    {housingData.tags.map((tag, index) =>
                         <Tag key={index + tag} label={tag} />
                     )}
                 </div>
                 <div className="hostRating">
                     <div className="hostHousing">
                         <Host
-                            host={{ "name": "Sqsd cqeffeadf" }}
-                            picture={{ "name": "Sqsd cqeffeadf", "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg" }} />
+                            host={housingData.host}
+                            picture={housingData.host} />
                     </div>
                     <div className="ratingHousing">
                         <Rating rating="4" />
@@ -94,12 +63,14 @@ function Housing() {
                 <div className="collapseHousingList">
                     <Collapse title="Equipements">
                         <CollapseList
-                            list={equipements}
+                            list={housingData.equipments}
                         />
                     </Collapse>
                 </div>
             </div>
         </div>
+    ) : (
+        <div>Chargement</div>
     )
 }
 

@@ -5,7 +5,6 @@
   align-items: center;
   gap: 10px;
 }
-
 .hostStyle p {
   display: flex;
   justify-content: flex-end;
@@ -15,11 +14,20 @@
   line-height: 142.6%;
   width: 5%;
 }
-
 .hostStyle img {
   display: flex;
   justify-content: flex-end;
   border-radius: 50%;
   width: 68px;
   height: 68px;
+}
+
+@media (max-width: 500px) {
+  .hostStyle p {
+    font-size: 12px;
+  }
+  .hostStyle img {
+    width: 40px;
+    height: 40px;
+  }
 }

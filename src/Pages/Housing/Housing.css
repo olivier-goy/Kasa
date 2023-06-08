@@ -2,7 +2,6 @@
   display: flex;
   margin-top: 20px;
 }
-
 .titreAndLocalisation {
   flex: 1;
   color: #ff6060;
@@ -14,7 +13,7 @@
   line-height: 142.6%;
 }
 .titreAndLocalisation p {
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 142.6%;
@@ -27,17 +26,72 @@
   justify-content: flex-end;
 }
 .ratingHousing {
-    margin-top: 20px;
+  margin-top: 20px;
   display: flex;
   justify-content: flex-end;
 }
 .collapseHousing {
-    display: flex;
-    gap: 76px;
+  display: flex;
+  gap: 76px;
 }
 .collapseHousingText {
- flex: 1;
+  flex: 1;
 }
 .collapseHousingList {
-flex: 1;
+  flex: 1;
+}
+
+@media (max-width: 850px) {
+  .titleHostRating {
+    display: block;
+    margin-top: 10px;
+  }
+  .titreAndLocalisation h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  .titreAndLocalisation p {
+    margin: 7px 0;
+    font-size: 16px;
+  }
+  .hostRating {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+  .hostHousing {
+    flex: 1;
+  }
+  .collapseHousing {
+    gap: 25px;
+  }
+  .ratingHousing {
+    margin-top: 0;
+    flex: 1;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 500px) {
+  .titleHostRating {
+    display: block;
+  }
+  .titreAndLocalisation h1 {
+    font-size: 18px;
+  }
+  .titreAndLocalisation p {
+    margin: 15px 0;
+    font-size: 14px;
+  }
+  .collapseHousing {
+    display: block;
+  }
+  .hostRating {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
 }

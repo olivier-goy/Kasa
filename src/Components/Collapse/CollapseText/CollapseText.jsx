@@ -1,4 +1,5 @@
 function CollapseText({ description }) {
+    
     return (
         <div>
             <p>{description}</p>

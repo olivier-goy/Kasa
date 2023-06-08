@@ -47,7 +47,6 @@ function About() {
                 </Collapse>
             </div>
         </div>
-
     )
 }
 
