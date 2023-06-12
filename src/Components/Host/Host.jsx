@@ -1,11 +1,11 @@
 import "../Host/Host.css"
 
-function Host({ host, picture }) {
+function Host({ hostName, picture }) {
     
     return (
         <div className="hostStyle">
-                <p>{host.name}</p>
-                <img src={picture.picture} alt="profil" />
+                <p>{hostName}</p>
+                <img src={picture} alt={hostName} />
         </div>
     )
 }

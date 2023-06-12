@@ -42,6 +42,7 @@
   }
   .collapsible {
     font-size: 16px;
+    height: 35px;
   }
   .collapsePicture {
     width: 25%;
@@ -55,6 +56,7 @@
 @media (max-width: 500px) {
   .collapsible {
     font-size: 13px;
+    height: 30px;
   }
   .content {
     font-size: 12px;

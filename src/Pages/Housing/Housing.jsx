@@ -6,22 +6,26 @@ import Host from "../../Components/Host/Host"
 import Rating from "../../Components/Rating/Rating"
 import Tag from "../../Components/Tag/Tag"
 import "../Housing/Housing.css"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import React, { useEffect, useState } from "react"
 
 function Housing() {
 
     const { id } = useParams()
+    const navigate = useNavigate()
     const [isDataLoading, setDataLoading] = useState(false)
-    const [housingData, setHousingData] = useState([])
+    const [housingData, setHousingData] = useState()
 
     useEffect(() => {
         async function fetchHousing() {
             try {
                 const response = await fetch('http://localhost:3000/Data/logements.json')
                 const result = await response.json()
-                const housingData = await result.filter((data) => data.id === id)
-                setHousingData(housingData[0])
+                const housingData = await result.find((data) => data.id === id)
+                if (!housingData) {
+                    return navigate('/logement-non-trouvé')
+                }
+                setHousingData(housingData)
                 setDataLoading(true)
             } catch (err) {
                 console.error(err)
@@ -44,8 +48,8 @@ function Housing() {
                 <div className="hostRating">
                     <div className="hostHousing">
                         <Host
-                            host={housingData.host}
-                            picture={housingData.host} />
+                            hostName={housingData.host.name}
+                            picture={housingData.host.picture} />
                     </div>
                     <div className="ratingHousing">
                         <Rating rating={housingData.rating} />
