@@ -48,7 +48,7 @@ function Housing() {
                             picture={housingData.host} />
                     </div>
                     <div className="ratingHousing">
-                        <Rating rating="4" />
+                        <Rating rating={housingData.rating} />
                     </div>
                 </div>
             </div>
