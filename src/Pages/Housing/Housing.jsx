@@ -32,7 +32,7 @@ function Housing() {
             }
         }
         fetchHousing()
-    }, [id])
+    })
 
     return isDataLoading ? (
         <div>
