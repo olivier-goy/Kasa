@@ -14,7 +14,7 @@ function Housing() {
     const { id } = useParams()
     const navigate = useNavigate()
     const [isDataLoading, setDataLoading] = useState(false)
-    const [housingData, setHousingData] = useState()
+    const [housingData, setHousingData] = useState([])
 
     useEffect(() => {
         async function fetchHousing() {
@@ -32,7 +32,7 @@ function Housing() {
             }
         }
         fetchHousing()
-    })
+    }, [id, navigate])
 
     return isDataLoading ? (
         <div>
