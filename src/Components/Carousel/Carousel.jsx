@@ -3,7 +3,7 @@ import "../Carousel/Carousel.css"
 import vectorNext from "../../Assets/vectorNext.png"
 import vectorPrev from "../../Assets/vectorPrev.png"
 
-function Carousel({ pictures }) {
+function Carousel({ pictures, altCarousel }) {
 
     const [index, setIndex] = useState(0)
 
@@ -23,16 +23,16 @@ function Carousel({ pictures }) {
 
     return (
         <div className="carouselStyle">
-            <img src={pictures[index]} className="pictureCarousel" alt="" />
+            <img src={pictures[index]} className="pictureCarousel" alt={altCarousel} />
             {
                 pictures.length > 1 &&
                 <div className="navCarousel">
                     <div className="prevCarouselStyle">
-                        <img src={vectorPrev} onClick={prevIndex} alt="" />
+                        <img src={vectorPrev} onClick={prevIndex} alt="logo flêche en arrière" />
                     </div>
                     <span>{index + 1}/{pictures.length}</span>
                     <div className="nextCarouselStyle">
-                        <img src={vectorNext} onClick={nextIndex} alt="" />
+                        <img src={vectorNext} onClick={nextIndex} alt="logo flêche en avant" />
                     </div>
                 </div>
             }

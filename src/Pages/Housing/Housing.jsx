@@ -36,7 +36,7 @@ function Housing() {
 
     return isDataLoading ? (
         <div>
-            <Carousel pictures={housingData.pictures} />
+            <Carousel pictures={housingData.pictures} altCarousel={housingData.title} />
             <div className="titleHostRating">
                 <div className="titreAndLocalisation">
                     <h1>{housingData.title}</h1>
