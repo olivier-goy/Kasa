@@ -19,7 +19,7 @@ function Housing() {
     useEffect(() => {
         async function fetchHousing() {
             try {
-                const response = await fetch('http://localhost:3000/Data/logements.json')
+                const response = await fetch('https://kasa-three-phi.vercel.app/Data/logements.json')
                 const result = await response.json()
                 const housingData = await result.find((data) => data.id === id)
                 if (!housingData) {
